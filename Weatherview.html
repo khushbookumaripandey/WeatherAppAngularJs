@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Angular</title>
+    <script src="/Users/khushbookumari/project/bower_components/angular/angular.js"></script>
+    <script src="WeatherScript.js"></script>
+      <link rel="stylesheet" href="Style.css">
+</head>
+<body ng-app="myModule"  ng-controller="myController">
+    <div class="bgImg default" id="defaultBgImg"></div>
+    <div class="bgImg city-hot" id="hotCityBgImg"></div>
+    <div class="bgImg city-cold" id="coldCityBgImg"></div>
+    <div class="bgImg city-default" id="defaultCityBgImg"></div>
+    <div class="Weather">
+        <div class="navbar">
+            <input type="text" id="searchCity" placeholder="Search Cities" ng-model="cities">
+            <button id="submit" ng-click="searchCity()">Search</i></button>
+        </div>
+        <div id="content">
+            <table class="table">
+                <tbody>
+                        <tr>
+                        <td><b>City</b></td>
+                        <td>{{Name}}</td>
+                        </tr>
+                        <tr>
+                        <td><b>Temperature in Celcius</b></td>
+                        <td>{{TemperatureValue}}</td>
+                    </tr>
+                    <tr>
+                    <td><b>Pressure</b></td>
+                    <td>{{Pressure}} hpa</td>
+                </tr>
+                </tbody>
+            </table>
+        </div> 
+      </div>
+</body>
+</html>
